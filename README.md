@@ -1,4 +1,7 @@
-# Project com.mycompany/DemoForm
+# Project DemoUser (Java + ZK)
+
+
+Project created to present the first steps of the knowledge acquired after the initial reading of the zk documentation
 
 Steps to run this project:
 
