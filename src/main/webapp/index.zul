@@ -1,0 +1,44 @@
+<window title="Lista de Usuários" width="1080px" border="normal"
+	apply="controller.UserController">
+	 
+    <hbox>
+    <grid>
+        <rows>
+            <row>
+                Nome : 
+                <textbox id="userName" constraint="no empty" cols="40"/> 
+                
+            </row>
+            <row>
+                Email :
+                <textbox id="userEmail" constraint="no empty" cols="40" type="email"/>
+            </row>
+        </rows>
+    </grid>
+    </hbox>
+    
+    <hbox align="center" height="60px" >
+    <button label="Adicionar Usuário" id="addButton" />
+        <button label="Deletar Usuário" id="removeButton" />
+        
+    </hbox>
+    
+   
+    <hbox align="center" height="100px" >
+		Busca:
+		<textbox id="keywordBox" />
+		<button id="searchButton" label="Search" iconSclass="z-icon-search" />
+	</hbox>
+	<listbox id="userListbox" emptyMessage="Nenhum usuário encontrado" height="160px" style="margin-top:10px">
+		<listhead>
+			<listheader label="Nome" />
+			<listheader label="Email" />
+		</listhead>
+		<template name="model">
+			<listitem>
+				<listcell label="${each.name}" ></listcell>
+				<listcell label="${each.email}"></listcell>
+			</listitem>
+		</template>
+	</listbox>
+</window>
